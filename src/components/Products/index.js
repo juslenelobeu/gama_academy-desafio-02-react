@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import * as S from "./styled";
 
-export default function Front() {
+export default function Products() {
   const [listProducts, setListProducts] = useState([]);
   useEffect(() => {
     const unsubscribe = () => {

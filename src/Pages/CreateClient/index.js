@@ -1,5 +1,5 @@
 import React from "react";
-import Front from "../../components/Front";
+import Clients from "../../components/Clients";
 import FormCreateClient from "../../components/FormCreateClient";
 
 import * as S from "./styled";
@@ -8,7 +8,7 @@ export default function CreateClient() {
   return (
     <S.Container>
       <FormCreateClient />
-      <Front />
+      <Clients />
     </S.Container>
   );
 }

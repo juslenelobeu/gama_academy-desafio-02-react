@@ -25,7 +25,6 @@ export const Container = styled.div`
 
 export const Header = styled.header`
   height: 20vh;
-  margin-bottom: 4rem;
 
   & button {
     width: 100px;

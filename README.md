@@ -1,10 +1,12 @@
 <div align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/juslenelobeu/gama_academy-desafio-02-react?style=flat-square">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/juslenelobeu/gama_academy-desafio-02-react?style=flat-square">
+  <a href="https://app.netlify.com/sites/gestao-cadastro-hc-juslenelobeu/deploys"><img alt="GitHub last commit" src="https://api.netlify.com/api/v1/badges/61424a81-c8a4-47f2-89fe-0a6bfdc8ce3f/deploy-status"></a>
 
   <h1>Gestão de Cadastro - Versão React</h1>
   <p>Gestão de cadastro de um e-commerce</p>
   <p>Projeto proposto pela Gama Academy durante o programa Hiring Coders 🚀</p>
+  <h3>Link do projeto: <a href="https://gestao-cadastro-hc-juslenelobeu.netlify.app/" target="_blank">preview</a></h3>
 </div>
 
 <h2>📚&ensp;Sobre Projeto</h2>

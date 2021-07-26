@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
 import { v4 as uuidv4 } from "uuid";
 
 import Input from "../../components/Input";
@@ -14,16 +13,21 @@ export default function FormCreateClient() {
     history.push("/");
   };
 
-  const [product, setProduct] = useState({
+  const [client, setClient] = useState({
     id: 0,
-    title: "",
-    price: 0,
+    name: "",
+    cpf: "",
+    email: "",
+    phone: "",
+    address: "",
+    city: "",
+    uf: "",
   });
-  const [products, setProducts] = useState([]);
+  const [clients, setClients] = useState([]);
 
   const handleInputChange = (event) => {
-    setProduct({
-      ...product,
+    setClient({
+      ...client,
       id: uuidv4(),
       [event.target.name]: event.target.value,
     });
@@ -31,24 +35,24 @@ export default function FormCreateClient() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if (product.name === "") {
-      return toast.error("Informe o nome do produto, por favor.");
-    } else if (product.price === "") {
-      return toast.error("Informe o preço, por favor.");
-    } else {
-      toast.success("Cadastro realizado!");
-      setProducts((products) => [...products, product]);
-      setProduct({
+    if (client.name === "") {
+      setClients((clients) => [...clients, client]);
+      setClient({
         id: 0,
-        title: "",
-        price: 0,
+        name: "",
+        cpf: "",
+        email: "",
+        phone: "",
+        address: "",
+        city: "",
+        uf: "",
       });
     }
   };
   useEffect(() => {
-    const currentProducts = JSON.stringify(products);
-    localStorage.setItem("products", currentProducts);
-  }, [products]);
+    const currentClients = JSON.stringify(clients);
+    localStorage.setItem("clients", currentClients);
+  }, [clients]);
 
   return (
     <S.Container>
@@ -66,8 +70,8 @@ export default function FormCreateClient() {
             <Input
               type="text"
               placeholder="Nome completo"
-              name="title"
-              value={product.title}
+              name="name"
+              value={client.name}
               onChange={handleInputChange}
               required
             />
@@ -75,15 +79,64 @@ export default function FormCreateClient() {
           <S.FormGroup>
             <Input
               type="text"
-              placeholder="Nome do produto"
-              name="title"
-              value={product.title}
+              placeholder="CPF"
+              name="cpf"
+              value={client.cpf}
+              onChange={handleInputChange}
+              required
+            />
+          </S.FormGroup>
+          <S.FormGroup>
+            <Input
+              type="email"
+              placeholder="E-mail"
+              name="email"
+              value={client.email}
+              onChange={handleInputChange}
+              required
+            />
+          </S.FormGroup>
+          <S.FormGroup>
+            <Input
+              type="tel"
+              placeholder="Telefone"
+              name="phone"
+              value={client.phone}
+              onChange={handleInputChange}
+              required
+            />
+          </S.FormGroup>
+          <S.FormGroup>
+            <Input
+              type="text"
+              placeholder="Endereço completo"
+              name="address"
+              value={client.address}
+              onChange={handleInputChange}
+              required
+            />
+          </S.FormGroup>
+          <S.FormGroup>
+            <Input
+              type="text"
+              placeholder="Cidade"
+              name="city"
+              value={client.city}
+              onChange={handleInputChange}
+              required
+            />
+          </S.FormGroup>
+          <S.FormGroup>
+            <Input
+              type="text"
+              placeholder="UF"
+              name="uf"
+              value={client.uf}
               onChange={handleInputChange}
               required
             />
           </S.FormGroup>
           <Button type="submit">Cadastrar</Button>
-          <ToastContainer />
         </form>
       </S.Content>
       <S.Footer>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
 import { v4 as uuidv4 } from "uuid";
 
 import Input from "../../components/Input";
@@ -32,11 +31,6 @@ export default function FormCreateClient() {
   const onSubmit = (event) => {
     event.preventDefault();
     if (product.name === "") {
-      return toast.error("Informe o nome do produto, por favor.");
-    } else if (product.price === "") {
-      return toast.error("Informe o preço, por favor.");
-    } else {
-      toast.success("Cadastro realizado!");
       setProducts((products) => [...products, product]);
       setProduct({
         id: 0,
@@ -84,7 +78,6 @@ export default function FormCreateClient() {
             />
           </S.FormGroup>
           <Button type="submit">Cadastrar</Button>
-          <ToastContainer />
         </form>
       </S.Content>
       <S.Footer>
