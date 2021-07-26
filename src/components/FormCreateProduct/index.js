@@ -7,7 +7,7 @@ import Button from "../../components/Button";
 
 import * as S from "./styled";
 
-export default function FormCreateClient() {
+export default function FormCreateProduct() {
   const history = useHistory();
   const GotoBack = () => {
     history.push("/");
