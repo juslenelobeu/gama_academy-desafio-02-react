@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +13,19 @@ export default createGlobalStyle`
 
   & body {
     font-family: 'Inter', sans-serif;
-    background-color: whitesmoke;
-    color: #666;
+    background-color: #171C1B;
+    color: #4D4D4D;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    @media (max-width: 578px) {
+      height: auto;
+      padding: 2rem 1rem;
+    }
   }
 }
 `;

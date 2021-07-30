@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
-const dark = "#323232";
-const primary = "darkcyan";
-const primaryLight = "greenyellow";
-
 export const Button = styled.button`
   width: 100%;
   padding: 1rem;
-  background: ${primary};
-  border-radius: 0.2rem;
-  border: none;
+
   text-transform: uppercase;
-  color: white;
+  font-weight: 700;
+
+  background: hsla(167, 100%, 62%, 1);
+
+  border: 0;
+  border-radius: 0.3rem;
+
   cursor: pointer;
 
+  transition: background 0.3s;
+
   &:hover {
-    background: ${primaryLight};
-    color: ${dark};
+    background: hsla(167, 100%, 32%, 1);
   }
 `;
