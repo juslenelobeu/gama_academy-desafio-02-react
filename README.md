@@ -6,6 +6,7 @@
   <h1>Gestão de Cadastro - Versão React</h1>
   <p>Gestão de cadastro de um e-commerce</p>
   <p>Projeto proposto pela Gama Academy durante o programa Hiring Coders 🚀</p>
+  <img src="https://github.com/juslenelobeu/gama_academy-desafio-02-react/blob/master/screenshot-desktop.jpg?raw=true">
   <h3>Link do projeto: <a href="https://gestao-cadastro-hc-juslenelobeu.netlify.app/" target="_blank">preview</a></h3>
 </div>
 
